@@ -1,0 +1,16 @@
+.dialogs{
+  display: flex;
+  background: darkgreen;
+
+}
+.users{
+  flex: 0 0 30%;
+  padding: 10px;
+}
+.chat{
+  flex: 0 0 70%;
+  padding: 10px;
+}
+.item{
+  color: white;
+}

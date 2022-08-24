@@ -1,0 +1,33 @@
+.title{
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(95, 95, 95);
+  margin-bottom: 20px;
+}
+.body{
+  padding-left: 20px;
+}
+.button{
+  color: white;
+  background: green;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 20px;
+  border: 0;
+}
+.hidden{
+  display: none;
+}
+.pages{
+  display: flex;
+  margin-bottom: 10px;
+}
+.page{
+  margin: 0 2.5px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+.currentPage{
+  font-weight: 700;
+}

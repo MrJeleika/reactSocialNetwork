@@ -1,0 +1,19 @@
+.chat{
+  padding: 10px;
+  width: 100%;
+}
+.messages{
+  margin-bottom: 20px;
+}
+.input{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid darkgreen;
+  margin-bottom: 15px;
+}
+.button{
+  padding: 8px 12px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}

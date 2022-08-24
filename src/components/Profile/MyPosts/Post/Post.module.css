@@ -1,0 +1,47 @@
+.post{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid darkgreen;
+  margin-bottom: 20px;
+  max-width: 100%;
+  word-break: break-all;
+}
+.title{
+  color: rgb(6, 172, 14);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  max-width: calc(100% - 20px);
+}
+.text{
+  color: rgb(39, 39, 39);
+}
+.button{
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  transition: 0.8s;
+}
+.hide{
+  opacity: 0;
+}
+.span{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15px;
+  background: darkgreen;
+  margin-top: 7px;
+}
+
+.firstSpan{
+  transform: rotate(45deg);
+}
+.secondSpan{
+  transform: rotate(-45deg);
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}

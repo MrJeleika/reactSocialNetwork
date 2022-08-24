@@ -1,0 +1,24 @@
+.title{
+  margin: 10px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+.myPosts{
+  padding: 10px;
+  word-break: break-all;
+}
+.input{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid darkgreen;
+  margin-bottom: 15px;
+}
+.button{
+  padding: 8px 12px;
+  background: transparent;
+  border: 2px solid darkgreen;
+
+}
+.posts{
+  margin-top: 20px;
+}

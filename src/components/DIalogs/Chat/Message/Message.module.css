@@ -1,0 +1,8 @@
+.message{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  word-break: break-all;
+  line-height: 1;
+  margin-bottom: 5px;
+}

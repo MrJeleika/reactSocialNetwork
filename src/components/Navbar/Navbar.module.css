@@ -1,0 +1,18 @@
+.nav{
+  flex: 0 0 25%;
+  background: darkgreen;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+.link{
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+.link:hover{
+  
+  color: gold !important;
+}
+.linkActive{
+  color: gold !important;
+}
