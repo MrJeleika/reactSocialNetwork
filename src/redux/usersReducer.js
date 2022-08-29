@@ -4,6 +4,7 @@ const SET_USERS = 'SET-USERS'
 const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE'
 const SET_TOTAL_USERS_COUNT = 'SET-TOTAL-USERS-COUNT'
 const TOGGLE_FETCHING = 'TOGGLE-FETCHING'
+const SET_USER_ID = 'SET-USER-ID'
 
 const initialState = {
     users: [],
@@ -12,6 +13,7 @@ const initialState = {
     loadedUsers: 4,
     currentPage: 1,
     isFetching: false,
+    userId: 2,
 }
 
 const UsersReducer = (state = initialState, action) => {
@@ -51,17 +53,25 @@ const UsersReducer = (state = initialState, action) => {
         ...state,
         isFetching: action.isFetching
       }
+    case SET_USER_ID:
+      console.log(action.userId);
+      return{
+        ...state,
+        userId: action.userId
+      }
+
     default:
       stateCopy = {...state}
       return stateCopy
   }
 }
 
-export const loadUsersAC = () => ({type:LOAD_USERS})
-export const followAC = (id) => ({type: FOLLOW, id})
-export const setUsersAC = (users) => ({type: SET_USERS, users})
-export const setCurrentPageAc = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
-export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
-export const toggleFetchingAC = (isFetching) => ({type: TOGGLE_FETCHING, isFetching})
+export const loadUsers = () => ({type:LOAD_USERS})
+export const follow = (id) => ({type: FOLLOW, id})
+export const setUsers = (users) => ({type: SET_USERS, users})
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
+export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
+export const toggleFetching = (isFetching) => ({type: TOGGLE_FETCHING, isFetching})
+export const setUserId = (userId) => ({type: SET_USER_ID, userId})
 
 export default UsersReducer;

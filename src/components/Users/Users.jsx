@@ -24,7 +24,7 @@ const Users = (props) => {
       })}
     </div>
     {props.usersPage.users.map((user, i) => 
-    i < props.usersPage.loadedUsers ? <User follow={props.follow} key={i} usersPage={props.usersPage}
+    i < props.usersPage.loadedUsers ? <User setUserId={props.setUserId} follow={props.follow} key={i} usersPage={props.usersPage}
       user={user} id={user.id} /> : ''
     )}
     <button onClick={()=> props.loadUsers()} className={s.button}>Show more</button>

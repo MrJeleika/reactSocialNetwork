@@ -27,15 +27,12 @@ export default class UsersAPIComponent extends Component {
   }
 
   render() {
-
     return (
       <>
 
-        <Users usersPage={this.props.usersPage}
-               isFetching={this.props.isFetching} 
-               follow={this.props.follow} 
+        <Users {...this.props}
                onPageChange={this.onPageChange} 
-               loadUsers={this.props.loadUsers}/>
+               />
       </>
 
     )

@@ -1,0 +1,36 @@
+.bio{
+  padding: 10px;
+  display: flex;
+}
+.ava{
+
+}
+.ava > img{
+  width: 150px;
+}
+.body{
+  padding: 10px 0px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.name{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.status{
+  
+}
+.link{
+  cursor: pointer;
+  margin: 0 5px;
+
+}
+.link > img{
+
+  width: 30px;
+}
+.hidden{
+  display: none;
+}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { useState } from 'react';
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
 
@@ -23,7 +22,7 @@ const MyPosts = (props) => {
         
         <div className={s.posts}>
           {props.profilePage.postList.map((post,i) =>
-            <Post deletePost={props.deletePost} dispatch={props.dispatch} key={i} id={i+1} title={post.title} text={post.text}/>
+            <Post deletePost={props.deletePost} key={i} id={i+1} title={post.title} text={post.text}/>
           )}
         </div>
       </div>

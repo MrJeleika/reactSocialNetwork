@@ -2,6 +2,7 @@ const ADD_POST = 'ADD-POST'
 const DELETE_POST = 'DELETE-POST'
 const UPDATE_NEW_POST_TITLE = 'UPDATE-NEW-POST-TITLE'
 const UPDATE_NEW_POST_BODY = 'UPDATE-NEW-POST-BODY'
+const SET_USER_PROFILE = 'SET-USER-PROFILE'
 
 let initialState= {
   postList : [
@@ -12,6 +13,7 @@ let initialState= {
   ],
   newPostTitleText: '',
   newPostBodyText: '',
+  profile: null
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -38,15 +40,21 @@ const profileReducer = (state = initialState, action) => {
       stateCopy.newPostBodyText = {...state.newPostBodyText}
       stateCopy.newPostBodyText = action.text
       return stateCopy;
+    case SET_USER_PROFILE:
+      return {
+        ...state,
+        profile: {...action.profile}
+      }
     default:
       return stateCopy;
   }
 }
 
 
-export const addPostCreator = () => ({type: ADD_POST})
-export const deletePostCreator = (id) => ({type: DELETE_POST, id})
-export const updateNewPostTitleCreator = (text) => ({type: UPDATE_NEW_POST_TITLE, text})
-export const updateNewPostBodyCreator = (text) => ({type: UPDATE_NEW_POST_BODY, text})
+export const addPost = () => ({type: ADD_POST})
+export const deletePost = (id) => ({type: DELETE_POST, id})
+export const updateNewPostTitle = (text) => ({type: UPDATE_NEW_POST_TITLE, text})
+export const updateNewPostBody = (text) => ({type: UPDATE_NEW_POST_BODY, text})
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 
 export default profileReducer
