@@ -5,10 +5,17 @@
   align-items: center;
   padding: 5px;
   margin-bottom: 10px;
+  justify-content: space-between;
+  padding: 10px;
 }
-.header__img{
+.img{
 }
-.header img{
+.img img{
   max-width: 100%;
   max-height: 90px;
+}
+.link{
+  font-size: 24px;
+  color: white !important;
+
 }

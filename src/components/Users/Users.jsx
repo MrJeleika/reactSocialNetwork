@@ -19,12 +19,12 @@ const Users = (props) => {
   <div className={s.body}>
     <div className={s.pages}>
       {pages.map(p => {
-      return <div onClick={() => props.onPageChange(p)} className={p === props.usersPage.currentPage ? `${s.page} ${
+      return <div key={p} onClick={() => props.onPageChange(p)} className={p === props.usersPage.currentPage ? `${s.page} ${
         s.currentPage}` : s.page}>{p}</div>
       })}
     </div>
     {props.usersPage.users.map((user, i) => 
-    i < props.usersPage.loadedUsers ? <User setUserId={props.setUserId} follow={props.follow} key={i} usersPage={props.usersPage}
+    i < props.usersPage.loadedUsers ? <User {...props} setUserId={props.setUserId} follow={props.follow} key={i} usersPage={props.usersPage}
       user={user} id={user.id} /> : ''
     )}
     <button onClick={()=> props.loadUsers()} className={s.button}>Show more</button>

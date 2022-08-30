@@ -10,7 +10,9 @@ export default class UsersAPIComponent extends Component {
   componentDidMount(){
     if(this.props.usersPage.users.length === 0){
       this.props.toggleFetching(true)
-      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.usersPage.currentPage}&count=${this.props.usersPage.pageSize}`).then(response => {
+      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.usersPage.currentPage}&count=${this.props.usersPage.pageSize}`, {
+        withCredentials: true
+      }).then(response => {
         this.props.toggleFetching(false)
         this.props.setUsers(response.data.items)
         this.props.setTotalUsersCount(response.data.totalCount)
@@ -20,7 +22,9 @@ export default class UsersAPIComponent extends Component {
   onPageChange = (pageNumber) =>{
     this.props.setCurrentPage(pageNumber)
     this.props.toggleFetching(true)
-    axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.usersPage.pageSize}`).then(response => {
+    axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.usersPage.pageSize}`,{
+      withCredentials: true
+    }).then(response => {
       this.props.toggleFetching(false)
       this.props.setUsers(response.data.items)
     })

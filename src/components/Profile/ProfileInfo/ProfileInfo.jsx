@@ -1,9 +1,22 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import Preloader from '../../common/preloader/Preloader';
 import s from './ProfileInfo.module.css'
 import ProfileLinks from './ProfileLink/ProfileLinks';
 
 const ProfileInfo = (props) => {
+  useEffect(() => {
+    if(props.myId){
+      let userId = props.router.params.userId
+      // Default profile id
+      if(!userId) userId = props.myId | 2
+      axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
+        props.setUserProfile(response.data)
+      })
+      
+    }
+
+  }, [props.router.params.id] );
 
   if(props.profile == null){
     return <Preloader/>
